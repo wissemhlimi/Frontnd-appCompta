@@ -41,6 +41,12 @@ const schema = yup.object().shape({
       max: 24,
     },
   ),
+  adresseCodes: yupFormSchemas.string(
+    i18n('user.fields.adresseCode'),
+    {
+      max: 300,
+    },
+  ),
   avatars: yupFormSchemas.images(
     i18n('user.fields.avatars'),
     {
@@ -70,6 +76,7 @@ const ProfileFormPage = (props) => {
       firstName: record.firstName,
       lastName: record.lastName,
       phoneNumber: record.phoneNumber,
+      adresseCode: record.adresseCode,
       avatars: record.avatars || [],
     };
   });
@@ -117,6 +124,12 @@ const ProfileFormPage = (props) => {
             label={i18n('user.fields.phoneNumber')}
             autoComplete="phoneNumber"
             prefix="+"
+            layout={formItemLayout}
+          />
+          <InputFormItem
+            name="adresseCode"
+            label={i18n('user.fields.adresseCode')}
+            autoComplete="adresseCode"
             layout={formItemLayout}
           />
 

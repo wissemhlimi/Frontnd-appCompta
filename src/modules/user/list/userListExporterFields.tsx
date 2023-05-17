@@ -19,6 +19,10 @@ export default [
     label: i18n('user.fields.phoneNumber'),
   },
   {
+    name: 'adresseCode',
+    label: i18n('user.fields.adresseCode'),
+  },
+  {
     name: 'avatars',
     label: i18n('user.fields.avatars'),
     render: exporterRenders.filesOrImages(),

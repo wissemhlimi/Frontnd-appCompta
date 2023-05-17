@@ -558,7 +558,6 @@ const es = {
           'fournisseurAvoir': 'Fournisseur',
           'montantHTAvoirRange': 'Montant HT',
           'montantHTAvoir': 'Montant HT',
-          'avoirTVA': 'TVA',
           'avoirTaxe': 'Taxe',
           'montantTTCAvoirRange': 'Montant TTC',
           'montantTTCAvoir': 'Montant TTC',
@@ -771,6 +770,14 @@ const es = {
       label: 'Rol personalizado',
       description: 'Acceso personalizado a recursos',
     },
+    societe: {
+      label: 'Company Role',
+      description: 'Company Role',
+    },
+    cabinet: {
+      label: 'Office Role',
+      description: 'Office Role',
+    },
   },
   user: {
     invite: 'Invitación',
@@ -787,6 +794,7 @@ const es = {
       status: 'Estado',
       disabled: 'Discapacitado',
       phoneNumber: 'Número de teléfono',
+      adresseCode: 'Adresse',
       role: 'Rol',
       createdAt: 'Creado el',
       updatedAt: 'Actualizado el',

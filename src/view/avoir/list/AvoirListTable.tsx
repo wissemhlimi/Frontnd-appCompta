@@ -76,12 +76,7 @@ const AvoirListTable = (props) => {
         dataIndex: 'montantHTAvoir',
         align: 'right',
       },
-      {
-        title: i18n('entities.avoir.fields.avoirTVA'),
-        sorter: false,
-        dataIndex: 'avoirTVA',
-        render: (value) => <TvaListItem value={value} />,
-      },
+    
       {
         title: i18n('entities.avoir.fields.avoirTaxe'),
         sorter: false,

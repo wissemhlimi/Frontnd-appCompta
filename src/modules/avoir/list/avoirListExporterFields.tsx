@@ -24,11 +24,7 @@ export default [
     label: i18n('entities.avoir.fields.montantHTAvoir'),
     render: exporterRenders.decimal(),
   },
-  {
-    name: 'avoirTVA',
-    label: i18n('entities.avoir.fields.avoirTVA'),
-    render: exporterRenders.relationToMany(),
-  },
+  
   {
     name: 'avoirTaxe',
     label: i18n('entities.avoir.fields.avoirTaxe'),

@@ -53,6 +53,14 @@ const UserView = (props) => {
           +{user.phoneNumber}
         </Form.Item>
       )}
+      {user.adresseCode && (
+        <Form.Item
+          {...viewItemLayout}
+          label={i18n('user.fields.adresseCode')}
+        >
+          {user.adresseCode}
+        </Form.Item>
+      )}
 
       {user.avatars && Boolean(user.avatars.length) && (
         <Form.Item

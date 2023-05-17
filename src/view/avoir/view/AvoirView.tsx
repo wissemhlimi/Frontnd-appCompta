@@ -57,14 +57,7 @@ const AvoirView = (props) => {
           </Form.Item>
         )}
 
-      {Boolean(record.avoirTVA) && Boolean(record.avoirTVA.length) && (
-        <Form.Item
-          {...viewItemLayout}
-          label={i18n('entities.avoir.fields.avoirTVA')}
-        >
-          <TvaViewItem value={record.avoirTVA} />
-        </Form.Item>
-      )}
+      
 
       {Boolean(record.avoirTaxe) && Boolean(record.avoirTaxe.length) && (
         <Form.Item

@@ -54,10 +54,7 @@ const schema = yup.object().shape({
       "required": true
     },
   ),
-  avoirTVA: yupFormSchemas.relationToMany(
-    i18n('entities.avoir.fields.avoirTVA'),
-    {},
-  ),
+  
   avoirTaxe: yupFormSchemas.relationToMany(
     i18n('entities.avoir.fields.avoirTaxe'),
     {},
@@ -175,6 +172,7 @@ const AvoirForm = (props) => {
   const [initialValues] = useState(() => {
     const record = props.record || {};
     if (props.isEditing) {
+      
       setNewFormTaxe(record.avoirTaxeList);
     }
     return {
@@ -182,13 +180,14 @@ const AvoirForm = (props) => {
       dateAvoir: record.dateAvoir ? moment(record.dateAvoir, 'YYYY-MM-DD') : null,
       fournisseurAvoir: record.fournisseurAvoir,
       montantHTAvoir: record.montantHTAvoir,
-      avoirTVA: record.avoirTVA || [],
       avoirTaxe: record.avoirTaxe || [],
       montantTTCAvoir: record.montantTTCAvoir,
       attachementAvoir: record.attachementAvoir || [],
       avoirSociete: record.avoirSociete,
     };
   });
+
+  console.log('form data', newFormTaxe)
 
   const form = useForm({
     resolver: yupResolver(schema),
@@ -264,14 +263,7 @@ const AvoirForm = (props) => {
             required={true}
             layout={formItemLayout}
           />
-          <TvaAutocompleteFormItem
-            name="avoirTVA"
-            label={i18n('entities.avoir.fields.avoirTVA')}
-            required={false}
-            showCreate={!props.modal}
-            layout={formItemLayout}
-            mode="multiple"
-          />
+          
           {/* <TaxesAutocompleteFormItem  
             name="avoirTaxe"
             label={i18n('entities.avoir.fields.avoirTaxe')}

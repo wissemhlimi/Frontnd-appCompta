@@ -559,7 +559,6 @@ const ptBR = {
           'fournisseurAvoir': 'Fournisseur',
           'montantHTAvoirRange': 'Montant HT',
           'montantHTAvoir': 'Montant HT',
-          'avoirTVA': 'TVA',
           'avoirTaxe': 'Taxe',
           'montantTTCAvoirRange': 'Montant TTC',
           'montantTTCAvoir': 'Montant TTC',

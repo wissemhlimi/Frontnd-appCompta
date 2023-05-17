@@ -43,14 +43,7 @@ export default [
       },
     ),
   },
-  {
-    name: 'avoirTVA',
-    label: i18n('entities.avoir.fields.avoirTVA'),
-    schema: schemas.relationToMany(
-      i18n('entities.avoir.fields.avoirTVA'),
-      {},
-    ),
-  },
+  
   {
     name: 'avoirTaxe',
     label: i18n('entities.avoir.fields.avoirTaxe'),
